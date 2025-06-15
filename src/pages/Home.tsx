@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import TracksSection from '../components/TracksSection';
@@ -12,12 +12,10 @@ import SponsorsSection from '../components/SponsorsSection';
 import Footer from '../components/Footer';
 
 export default function Home() {
-  const [isLoaded, setIsLoaded] = useState(false);
-
+  
   useEffect(() => {
-    setIsLoaded(true);
-    console.log("Home component rendered");
-  }, []);
+  console.log("Home component rendered");
+}, []);
 
   return (
     <div className="min-h-screen bg-[var(--background)] cyber-grid">

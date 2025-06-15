@@ -48,15 +48,8 @@ export async function processPayment(details: PaymentDetails): Promise<PaymentRe
 }
 
 // Get payment status by transaction ID
-export async function getPaymentStatus(transactionId: string): Promise<{status: 'completed' | 'pending' | 'failed', details?: string}> {
-  // Simulate network request
-  await new Promise(resolve => setTimeout(resolve, 800));
-  
-  // Always return completed for this mock implementation
-  return {
-    status: 'completed',
-    details: 'Payment processed successfully'
-  };
+export async function getPaymentStatus(): Promise<{status: 'completed' | 'pending' | 'failed', details?: string}> {
+  return { status: 'pending' };
 }
 
 // Store payment record in local storage
